@@ -1,5 +1,5 @@
 "use strict";
-
+/*
 function background(backgroundColor) {
 	const body = document.querySelector(`body`);
 
@@ -33,7 +33,7 @@ function textColor(color) {
 }
 let color = prompt('Виберіть колір тексту: yellow, white, gray.');
 textColor(color);
-
+*/
 /*
 function fontSize(size) {
 	const mySize = document.body.querySelector(`ul`);
@@ -53,7 +53,7 @@ let size = prompt(`Виберіть розмір шрифта: 13px, 19px, 50px.
 fontSize(size);
 */
 
-
+/*
 function fontSize(size) {
 	const mySize = document.querySelectorAll(`ul, ol`);
 
@@ -76,5 +76,120 @@ function listStyleType(listStyle) {
 
 let listStyle = prompt(`Виберіть маркер: decimal, square, upper-roman`);
 listStyleType(listStyle);
+*/
 
 
+//1 Задайте колір сторінки
+function backgroundColorBody(body) {
+	const baccolbod = document.querySelectorAll(`body`);
+
+	baccolbod.forEach(bcb => {
+		bcb.style.backgroundColor = body
+	})
+}
+
+let body = prompt(`Задайте колір сторінки. Наприклад: `);
+backgroundColorBody(body);
+
+
+//2 Оберіть розташування заголовка
+function headerLocation(locat) {
+	const headloc = document.querySelectorAll(`h1`);
+
+	headloc.forEach(hl => {
+		hl.style.textAlign = locat
+	})
+}
+
+let locat = prompt(`Оберіть розташування заголовка. Наприклад: center  left  right`);
+headerLocation(locat);
+
+
+//3 Задайте колір для заголовка
+function headerColor(col) {
+	const headcol = document.querySelectorAll(`h1`);
+
+	for (let i=0; i<headcol.length; i++) {
+		headcol[i].style.color = col
+	}
+}
+
+let col = prompt(`Задайте колір для тегу "h1"`);
+headerColor(col);
+
+
+//4 Задайте стиль шрифта для заголовка
+function fontFamily(family) {
+	const fontfam = document.querySelectorAll(`h1`);
+
+	for (let i=0; i<fontfam.length; i++) {
+		fontfam[i].style.fontStyle = family
+	}
+}
+
+let family = prompt(`Задайте стиль шрифта для заголовка`);
+fontFamily(family);
+
+
+//5 Задайте фон тега "ул"
+function pageBackground(style) {
+	const sstt = document.querySelectorAll(`ul`);
+
+	sstt.forEach(past => {
+		past.style.backgroundColor = style;
+	})
+}
+let style = prompt(`Задайте фон тега "ул". Наприклад: Calamansi (#FCFFA4); Ghost white (#F8F8FF); і т.д`);
+pageBackground(style);
+
+
+//6 Задайте колір шрифта для тега 'ол'
+function styleColor(color) {
+	let col = document.querySelectorAll(`ul, ol`);
+
+	for (let i=0; i<col.length; i++) {
+		col[i].style.color = color;
+	}
+}
+
+let color = prompt(`Задайте колір шрифта для тега 'ол'`);
+styleColor(color);
+
+
+//7 Задайте розмір шрифта для тега 'ол'
+function fontSize(size) {
+	const ff = document.querySelectorAll(`ul, ol`);
+
+	ff.forEach(fs => {
+		fs.style.fontSize = size
+	})
+}
+
+let size = prompt(`Задайте розмір шрифта для тега 'ол' в пікселях`);
+fontSize(size);
+
+
+//8 Задайте товщину шрифта у тезі 'ол'
+function fontWeight(weight) {
+	const fw = document.querySelectorAll(`ul, ol`);
+
+	for (let i=0; i<fw.length; i++) {
+		fw[i].style.fontWeight = weight;
+	}
+}
+
+let weight = prompt(`Задайте розмір шрифта для тега 'ol'`);
+fontWeight(weight);
+
+
+//9 Задайте маркер для елементів
+function listStyleType(listStyle) {
+	const list = document.querySelectorAll(`ul, ol`);
+
+	list.forEach(lst => {
+		lst.style.listStyleType = listStyle
+	})
+}
+
+let listStyle = prompt(`Виберіть маркер: decimal, square, upper-roman`);
+listStyleType(listStyle);
