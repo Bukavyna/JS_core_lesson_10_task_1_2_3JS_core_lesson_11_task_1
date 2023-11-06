@@ -193,3 +193,14 @@ function listStyleType(listStyle) {
 
 let listStyle = prompt(`Виберіть маркер: decimal, square, upper-roman`);
 listStyleType(listStyle);
+
+
+let ll = document.getElementsByTagName(`a`);
+
+let input = prompt(`Введіть посилання`);
+
+for (let i=0; i<ll.length; i++) {
+	ll[i].href = input;
+	ll[i].target = `_blank`;
+	ll[i].textContent = input;
+}
